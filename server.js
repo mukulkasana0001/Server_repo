@@ -31,5 +31,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(3000, () => {
-  console.log("Server listening on https://server-repo-phi.vercel.app");
+  console.log("Server listening on https://mukulkasana0001.github.io/Server_repo/");
 });

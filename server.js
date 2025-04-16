@@ -16,7 +16,7 @@ const io = new Server(server, {
     ], 
   }
 });
-
+   console.log("opened.")
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
 

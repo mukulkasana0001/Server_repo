@@ -5,19 +5,30 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://chat-app-ecru-xi-77.vercel.app"
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 const server = http.createServer(app);
+
+
 const io = new Server(server, {
   cors: {
-    origin:  [
-      // "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
       "https://chat-app-ecru-xi-77.vercel.app"
-    ],  
+    ],
     methods: ["GET", "POST"],
     credentials: true
   }
 });
+
    console.log("opened.")
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);

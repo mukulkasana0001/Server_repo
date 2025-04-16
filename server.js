@@ -12,7 +12,7 @@ const io = new Server(server, {
   cors: {
     origin:  [
       // "http://localhost:3000",
-      "https://chat-app-mukulkasana0001s-projects.vercel.app"
+      "https://chat-app-ecru-xi-77.vercel.app"
     ], 
   }
 });

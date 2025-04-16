@@ -13,7 +13,9 @@ const io = new Server(server, {
     origin:  [
       // "http://localhost:3000",
       "https://chat-app-ecru-xi-77.vercel.app"
-    ], 
+    ],  
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
    console.log("opened.")
